@@ -1,0 +1,26 @@
+# --- secrets (never upload) ---
+config.json
+topic_research/config.yaml
+client_secret*.json
+token*.json
+.env
+
+# --- generated / large files ---
+episodes/
+library/
+input/**/*
+!input/**/
+!input/**/_PUT_FILES_HERE.txt
+!input/PUT_FILES_HERE.txt
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.fcpxml
+__pycache__/
+*.pyc
+
+# --- topic_research private data ---
+topic_research/data/
+topic_research/logs/
+topic_research/videos/

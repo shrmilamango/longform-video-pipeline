@@ -1,0 +1,5 @@
+Put these 3 files in this folder for each new video:
+
+  script.txt   - the narration script (plain text)
+  voice.mp3    - the full TTS voiceover (voice.wav also works)
+  music.mp3    - background music, any length - it loops (music.wav also works)

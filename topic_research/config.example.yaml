@@ -1,0 +1,38 @@
+# ---------------------------------------------------------------
+# Topic research - settings
+# Copy this file to config.yaml and fill in your keys. Every key is FREE.
+# ---------------------------------------------------------------
+
+channel:
+  name: Sleep On Galaxy
+  channel_id: ""                 # your YouTube channel id (starts with UC) - your own videos get their own table
+
+keys:
+  youtube_api_key: ""             # console.cloud.google.com -> enable "YouTube Data API v3" -> Credentials -> API key
+  gemini_api_key: ""              # optional: only if Gemini should write the topic ideas automatically
+  telegram_bot_token: ""          # optional: phone alerts. Create a bot with @BotFather
+  telegram_chat_id: ""            # optional: run "py sog.py telegram-id" after messaging your bot
+
+ai:
+  # manual = writes a prompt file; you paste it into your AI assistant and save the answer as ideas.md
+  # gemini = asks Gemini automatically (needs gemini_api_key)
+  topics_mode: manual
+  gemini_text_model: gemini-2.5-flash
+
+research:
+  # Channels to watch (handles or channel IDs). Wrong handles are skipped with a warning.
+  competitors:
+    - "@SleepOnScience"
+    - "@MagneticSpaceX"
+    - "@CalmSpaceToSleep"
+    - "@SleepThroughSpaceTalks"
+    - "@SleepyScienceChannel"
+  # Searches that discover new winning videos (each search costs 100 of your 10,000 free daily units).
+  discover_queries:
+    - "space documentary for sleep"
+    - "universe facts to fall asleep to"
+    - "black hole sleep documentary"
+  lookback_days: 120              # only videos published in this window count as "recent winners"
+  min_minutes: 45                 # ignore videos shorter than this
+  top_n: 30
+  run_every_days: 2               # how often research is considered "due"
